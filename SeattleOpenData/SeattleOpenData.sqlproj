@@ -83,5 +83,6 @@
     <Build Include="dbo\Tables\ElementDetails.sql" />
     <Build Include="dbo\Stored Procedures\t.sql" />
     <Build Include="dbo\Stored Procedures\usp_ProcessCollectionInventoryJson.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ProcessSPLDataDictionaryJson.sql" />
   </ItemGroup>
 </Project>

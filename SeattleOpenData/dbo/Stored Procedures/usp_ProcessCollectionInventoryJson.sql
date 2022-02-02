@@ -1,11 +1,4 @@
-﻿SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
--- =============================================
--- Description: process json into table
--- =============================================
-CREATE OR ALTER PROCEDURE [dbo].[usp_ProcessCollectionInventoryJson]
+﻿CREATE PROCEDURE [dbo].[usp_ProcessCollectionInventoryJson]
   @FilePath VARCHAR(max)
 AS
   SET XACT_ABORT,

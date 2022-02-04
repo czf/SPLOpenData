@@ -53,6 +53,28 @@ SET XACT_ABORT,
 
 	SET @JsonContent = NULL;
 
+	
+
+	--Begin ItemCollection Delete, Update, Insert
+
+	DELETE IC
+	FROM dbo.ItemCollection IC
+	RIGHT JOIN #SourceData SD ON IC.Code = SD.SourceCode
+	WHERE IC.Code IS NULL;
+
+	UPDATE IC
+	SET 
+		[Description] = SD.SourceDescription,
+		FormatGroup = SD.SourceFormatGroup,
+		FormatSubgroup = SD.SourceFormatSubgroup,
+		CategoryGroup = SD.SourceCategoryGroup,
+		CategorySubgroup = SD.SourceCategorySubgroup,
+		AgeGroup = SD.SourceAgeGroup
+	FROM dbo.ItemCollection IC
+	INNER JOIN #SourceData SD ON IC.Code = SD.SourceCode
+	WHERE SD.SourceCodeType = 'ItemCollection' ;
+	
+
 	INSERT INTO dbo.ItemCollection(
 	Code,
 	Description,
@@ -75,6 +97,26 @@ SET XACT_ABORT,
 		SourceCodeType = 'ItemCollection' AND
 		NOT EXISTS(SELECT 1 FROM ItemCollection IC WHERE Code = SourceCode);
 
+	--End ItemCollection Delete, Update, Insert
+
+	--Begin ItemLocation Delete, Update, Insert
+	DELETE IL
+	FROM dbo.ItemLocation IL
+	RIGHT JOIN #SourceData SD ON IL.Code = SD.SourceCode
+	WHERE IL.Code IS NULL;
+
+	UPDATE IL
+	SET 
+		[Description] = SD.SourceDescription,
+		FormatGroup = SD.SourceFormatGroup,
+		FormatSubgroup = SD.SourceFormatSubgroup,
+		CategoryGroup = SD.SourceCategoryGroup,
+		CategorySubgroup = SD.SourceCategorySubgroup,
+		AgeGroup = SD.SourceAgeGroup
+	FROM dbo.ItemCollection IL
+	INNER JOIN #SourceData SD ON IL.Code = SD.SourceCode
+	WHERE SD.SourceCodeType = 'Location' ;
+
 	INSERT INTO dbo.ItemLocation(
 	Code,
 	Description,
@@ -96,6 +138,27 @@ SET XACT_ABORT,
 		WHERE 
 		SourceCodeType = 'Location' AND
 		NOT EXISTS(SELECT 1 FROM ItemLocation IL WHERE Code = SourceCode);
+
+	--End ItemLocation Delete, Update, Insert
+
+	--Begin ItemType Delete, Update, Insert
+	DELETE IT
+	FROM dbo.ItemType IT
+	RIGHT JOIN #SourceData SD ON IT.Code = SD.SourceCode
+	WHERE IT.Code IS NULL;
+
+	UPDATE IT
+	SET 
+		[Description] = SD.SourceDescription,
+		FormatGroup = SD.SourceFormatGroup,
+		FormatSubgroup = SD.SourceFormatSubgroup,
+		CategoryGroup = SD.SourceCategoryGroup,
+		CategorySubgroup = SD.SourceCategorySubgroup,
+		AgeGroup = SD.SourceAgeGroup
+	FROM dbo.ItemCollection IT
+	INNER JOIN #SourceData SD ON IT.Code = SD.SourceCode
+	WHERE SD.SourceCodeType = 'ItemType' ;
+
 
 	INSERT INTO dbo.ItemType(
 	Code,

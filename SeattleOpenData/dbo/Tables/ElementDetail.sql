@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[ElementDetails] (
+﻿CREATE TABLE [dbo].[ElementDetail] (
     [BibNum]            BIGINT NOT NULL,
     [ReportDate]        DATE   NOT NULL,
     [TitleId]           BIGINT NULL,
@@ -11,6 +11,4 @@
     CONSTRAINT [FK_ElementDetails_Publisher] FOREIGN KEY ([PublisherId]) REFERENCES [dbo].[Publisher] ([PublisherId]),
     CONSTRAINT [FK_ElementDetails_Title] FOREIGN KEY ([TitleId]) REFERENCES [dbo].[Title] ([TitleId])
 );
-
-
 

@@ -6,10 +6,11 @@
 CREATE   PROCEDURE dbo.[usp_ProcessSPLDataDictionaryJson]
 	@FilePath VARCHAR(max)
 AS
+BEGIN
 SET XACT_ABORT,
     NOCOUNT ON;
-  BEGIN TRY;
-    BEGIN TRANSACTION;
+  BEGIN TRY
+    BEGIN TRANSACTION
     DECLARE @JsonContent NVARCHAR(max);
 	 --https://stackoverflow.com/questions/13831472/using-a-variable-in-openrowset-query
     DECLARE @Sql NVARCHAR(max) = 'SELECT @JsonContentOUT = BulkColumn FROM OPENROWSET (BULK ''' + @FilePath + ''', SINGLE_CLOB) AS IMPORT;';
@@ -189,3 +190,4 @@ SET XACT_ABORT,
   END TRY
   BEGIN CATCH
   END CATCH;
+END;

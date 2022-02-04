@@ -7,7 +7,7 @@ BEGIN
 --set @FilePath = 'C:\dev\solutions\SPLOpenData\target\libraryResultTemp_0.json'
 SET XACT_ABORT,
     NOCOUNT ON;
-  BEGIN TRY;
+  BEGIN TRY
 
 BEGIN TRANSACTION;
     DECLARE @JsonContent NVARCHAR(max);
@@ -97,7 +97,7 @@ BEGIN TRANSACTION;
 		WHERE NOT EXISTS(SELECT 1 FROM ElementISBN E WHERE E.BibNum = SD.SourceBibNum AND E.ReportDate = SD.SourceReportDate AND E.ISBN = TRIM(value))
 
 
-		INSERT INTO dbo.ElementDetails 
+		INSERT INTO dbo.ElementDetail 
 		SELECT DISTINCT
 			SourceBibNum,
 			SourceReportDate,
@@ -110,7 +110,7 @@ BEGIN TRANSACTION;
 		INNER JOIN Title T ON T.Title = SD.SourceTitle
 		INNER JOIN PublicationYear PY ON PY.PublicationYear = SD.SourcePublicationYear
 		INNER JOIN Publisher P ON P.PublisherName = SD.SourcePublisher
-		WHERE NOT EXISTS( SELECT 1 FROM dbo.ElementDetails ED WHERE ED.BibNum = SD.SourceBibNum and ED.ReportDate = SD.SourceReportDate)
+		WHERE NOT EXISTS( SELECT 1 FROM dbo.ElementDetail ED WHERE ED.BibNum = SD.SourceBibNum and ED.ReportDate = SD.SourceReportDate)
 
 		INSERT INTO dbo.ElementInventory(
 		BibNum,
@@ -135,4 +135,4 @@ BEGIN TRANSACTION;
   END TRY
   BEGIN CATCH
   END CATCH;
-END
+END;

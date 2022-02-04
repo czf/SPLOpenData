@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "target", "target", "{CD7BBEAC-9321-4868-A74E-7DE838413D6A}"
 	ProjectSection(SolutionItems) = preProject
 		target\appsettings.json = target\appsettings.json
+		Keys.txt = Keys.txt
 		SeattleOpenData\SqlSchemaCompare2.scmp = SeattleOpenData\SqlSchemaCompare2.scmp
 	EndProjectSection
 EndProject

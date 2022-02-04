@@ -1,0 +1,29 @@
+ALTER TABLE [dbo].[ElementDetail]  DROP CONSTRAINT [FK_ElementDetails_Author]
+ALTER TABLE [dbo].[ElementAuthor]  DROP CONSTRAINT [FK_ItemAuthor_Author]
+ALTER TABLE [dbo].[ElementDetail]  DROP CONSTRAINT [FK_ElementDetails_PublicationYear]
+ALTER TABLE [dbo].[ElementPublicationYear]  DROP CONSTRAINT [FK_ItemPublicationYear_PublicationYear]
+ALTER TABLE [dbo].[ElementDetail]  DROP CONSTRAINT [FK_ElementDetails_Publisher]
+ALTER TABLE [dbo].[ElementPublisher]  DROP CONSTRAINT [FK_ItemPublisher_Publisher]
+ALTER TABLE [dbo].[ElementDetail]  DROP CONSTRAINT [FK_ElementDetails_Title]
+ALTER TABLE [dbo].[ElementTitle]  DROP CONSTRAINT [FK_ItemTitle_Title]
+
+
+ALTER TABLE [dbo].[ElementDetail]  WITH  CHECK  ADD CONSTRAINT [FK_ElementDetails_Author] FOREIGN KEY ([AuthorId]) REFERENCES [dbo].[Author] ([AuthorId]) ON UPDATE  NO ACTION  ON DELETE  NO ACTION 
+ALTER TABLE [dbo].[ElementAuthor]  WITH  CHECK  ADD CONSTRAINT [FK_ItemAuthor_Author] FOREIGN KEY ([AuthorId]) REFERENCES [dbo].[Author] ([AuthorId]) ON UPDATE  NO ACTION  ON DELETE  NO ACTION 
+ALTER TABLE [dbo].[ElementDetail]  WITH  CHECK  ADD CONSTRAINT [FK_ElementDetails_PublicationYear] FOREIGN KEY ([PublicationYearId]) REFERENCES [dbo].[PublicationYear] ([PublicationYearId]) ON UPDATE  NO ACTION  ON DELETE  NO ACTION 
+ALTER TABLE [dbo].[ElementPublicationYear]  WITH  CHECK  ADD CONSTRAINT [FK_ItemPublicationYear_PublicationYear] FOREIGN KEY ([PublicationYearId]) REFERENCES [dbo].[PublicationYear] ([PublicationYearId]) ON UPDATE  NO ACTION  ON DELETE  NO ACTION 
+ALTER TABLE [dbo].[ElementDetail]  WITH  CHECK  ADD CONSTRAINT [FK_ElementDetails_Publisher] FOREIGN KEY ([PublisherId]) REFERENCES [dbo].[Publisher] ([PublisherId]) ON UPDATE  NO ACTION  ON DELETE  NO ACTION 
+ALTER TABLE [dbo].[ElementPublisher]  WITH  CHECK  ADD CONSTRAINT [FK_ItemPublisher_Publisher] FOREIGN KEY ([PublisherId]) REFERENCES [dbo].[Publisher] ([PublisherId]) ON UPDATE  NO ACTION  ON DELETE  NO ACTION 
+ALTER TABLE [dbo].[ElementDetail]  WITH  CHECK  ADD CONSTRAINT [FK_ElementDetails_Title] FOREIGN KEY ([TitleId]) REFERENCES [dbo].[Title] ([TitleId]) ON UPDATE  NO ACTION  ON DELETE  NO ACTION 
+ALTER TABLE [dbo].[ElementTitle]  WITH  CHECK  ADD CONSTRAINT [FK_ItemTitle_Title] FOREIGN KEY ([TitleId]) REFERENCES [dbo].[Title] ([TitleId]) ON UPDATE  NO ACTION  ON DELETE  NO ACTION 
+
+
+
+
+
+
+exec dbo.[FK_Operation] 'DROP', 'Author'
+exec dbo.[FK_Operation] 'DROP', 'PublicationYear'
+exec dbo.[FK_Operation] 'DROP', 'Publisher'
+exec dbo.[FK_Operation] 'DROP', 'Subject'
+exec dbo.[FK_Operation] 'DROP', 'Title'

@@ -38,7 +38,7 @@ BEGIN TRANSACTION;
 	INSERT INTO #SourceData
 	
 	  Select SourceBibNum,
-	  SourceTitle,
+	  ISNULL(SourceTitle,''),
 		SourceAuthor,
 		SourceISBN,
 		SourcePublicationYear,
@@ -134,5 +134,7 @@ BEGIN TRANSACTION;
       COMMIT TRANSACTION;
   END TRY
   BEGIN CATCH
+	  PRINT 'IN CATCH';
+	  THROW;
   END CATCH;
 END;

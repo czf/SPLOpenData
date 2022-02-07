@@ -84,5 +84,6 @@
     <Build Include="dbo\Stored Procedures\usp_ProcessSPLDataDictionaryJson.sql" />
     <Build Include="dbo\Tables\ElementDetail.sql" />
     <Build Include="dbo\Stored Procedures\FK_Operation.sql" />
+    <Build Include="dbo\Tables\ProcessedFile.sql" />
   </ItemGroup>
 </Project>

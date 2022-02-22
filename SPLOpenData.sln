@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "target", "target", "{CD7BBE
 		SeattleOpenData\SqlSchemaCompare2.scmp = SeattleOpenData\SqlSchemaCompare2.scmp
 	EndProjectSection
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "SeattlePublicLibraryOpenData", "SeattlePublicLibraryOpenData\SeattlePublicLibraryOpenData.sqlproj", "{4E0FB89D-4E6C-456C-97C4-665D2F2FB7EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,12 @@ Global
 		{CF83CC74-FAFD-47F2-9BB9-ED0AEF421686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF83CC74-FAFD-47F2-9BB9-ED0AEF421686}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CF83CC74-FAFD-47F2-9BB9-ED0AEF421686}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4E0FB89D-4E6C-456C-97C4-665D2F2FB7EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E0FB89D-4E6C-456C-97C4-665D2F2FB7EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E0FB89D-4E6C-456C-97C4-665D2F2FB7EE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4E0FB89D-4E6C-456C-97C4-665D2F2FB7EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E0FB89D-4E6C-456C-97C4-665D2F2FB7EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E0FB89D-4E6C-456C-97C4-665D2F2FB7EE}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

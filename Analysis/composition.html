@@ -14620,6 +14620,26 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-C#"><pre><span></span><span class="p">&lt;</span><span class="n">style</span><span class="p">&gt;</span><span class="w"></span>
+<span class="n">pre</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">overflow</span><span class="p">-</span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="n">scroll</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="p">&lt;/</span><span class="n">style</span><span class="p">&gt;</span><span class="w"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="p">--</span><span class="n">name</span><span class="w"> </span><span class="n">itemTypeAgeGroup</span><span class="w"></span>
 
 
@@ -14669,196 +14689,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-C#"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
-<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.FSharp.Core</span><span class="p">;</span><span class="w"></span>
-<span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET</span><span class="p">;</span><span class="w"></span>
-<span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET.LayoutObjects</span><span class="p">;</span><span class="w"></span>
-
-
-
-<span class="n">Trace</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Trace</span><span class="p">(</span><span class="s">&quot;bar&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">t</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[][]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">},</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="s">&quot;sub1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sub2&quot;</span><span class="p">,</span><span class="s">&quot;sub1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sub2&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
-<span class="n">t</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[]{</span><span class="m">2</span><span class="p">,</span><span class="m">4</span><span class="p">,</span><span class="m">6</span><span class="p">,</span><span class="m">8</span><span class="p">});</span><span class="w"></span>
-<span class="c1">//t.SetValue(&quot;x&quot;, new int[][] { new int[]{1}, new int[]{2} });</span>
-<span class="n">t</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name1&quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="n">Trace</span><span class="w"> </span><span class="n">t2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Trace</span><span class="p">(</span><span class="s">&quot;bar&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="n">t2</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[][]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="p">},</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="s">&quot;sub1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sub2&quot;</span><span class="p">,</span><span class="s">&quot;sub1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sub2&quot;</span><span class="p">}</span><span class="w"> </span><span class="p">});</span><span class="w"></span>
-<span class="n">t2</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">[]{</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">,</span><span class="m">4</span><span class="p">});</span><span class="w"></span>
-<span class="c1">//t.SetValue(&quot;x&quot;, new int[][] { new int[]{1}, new int[]{2} });</span>
-<span class="n">t2</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;name2&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="c1">//var tra = Trace2D.initBar(FSharpFunc&lt;Trace2D, Trace2D&gt;.FromConverter(new Converter&lt;Trace2D, Trace2D&gt;(x =&gt; x)));</span>
-<span class="kt">var</span><span class="w"> </span><span class="n">charts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GenericChart</span><span class="p">.</span><span class="n">GenericChart</span><span class="p">[]</span><span class="w"> </span><span class="p">{</span><span class="n">GenericChart</span><span class="p">.</span><span class="n">ofTraceObject</span><span class="p">(</span><span class="k">false</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="p">),</span><span class="w"> </span><span class="n">GenericChart</span><span class="p">.</span><span class="n">ofTraceObject</span><span class="p">(</span><span class="k">false</span><span class="p">,</span><span class="n">t2</span><span class="p">)};</span><span class="w"></span>
-<span class="n">GenericChart</span><span class="p">.</span><span class="n">combine</span><span class="p">(</span><span class="n">charts</span><span class="p">)</span><span class="w"></span>
-<span class="c1">//.WithLayout(Layout.init&lt;int&gt;(BarMode:StyleParam.BarMode.Stack))</span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-
-<div>
-    <div id="e54a5d49-b308-4684-96c0-209c01820cf5"><!-- Plotly chart will be drawn inside this DIV --></div>
-<script type="text/javascript">
-
-            var renderPlotly_e54a5d49b308468496c0209c01820cf5 = function() {
-            var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-2.6.3.min'}}) || require;
-            fsharpPlotlyRequire(['plotly'], function(Plotly) {
-
-            var data = [{"type":"bar","x":[["a","a","b","b"],["sub1","sub2","sub1","sub2"]],"y":[2,4,6,8],"name":"name1"},{"type":"bar","x":[["a","a","b","b"],["sub1","sub2","sub1","sub2"]],"y":[1,2,3,4],"name":"name2"}];
-            var layout = {};
-            var config = {};
-            Plotly.newPlot('e54a5d49-b308-4684-96c0-209c01820cf5', data, layout, config);
-});
-            };
-            if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
-                var script = document.createElement("script");
-                script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
-                script.onload = function(){
-                    renderPlotly_e54a5d49b308468496c0209c01820cf5();
-                };
-                document.getElementsByTagName("head")[0].appendChild(script);
-            }
-            else {
-                renderPlotly_e54a5d49b308468496c0209c01820cf5();
-            }
-</script>
-
-    
-</div    
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="n">r</span><span class="w"> </span><span class="s">&quot;nuget:Plotly.NET,*-*&quot;</span><span class="w"></span>
-<span class="err">#</span><span class="n">r</span><span class="w"> </span><span class="s">&quot;nuget: Plotly.NET.Interactive,*-*&quot;</span><span class="w"></span>
-
-<span class="n">open</span><span class="w"> </span><span class="n">Plotly</span><span class="p">.</span><span class="n">NET</span><span class="w"></span>
-
-<span class="k">let</span><span class="w"> </span><span class="n">trace</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="p">=</span><span class="w">  </span><span class="c1">//Workaround</span>
-<span class="w">    </span><span class="k">let</span><span class="w"> </span><span class="n">tmp</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Trace</span><span class="p">(</span><span class="s">&quot;bar&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">tmp</span><span class="p">?</span><span class="n">x</span><span class="w"> </span><span class="p">&lt;-</span><span class="w"> </span><span class="n">x</span><span class="w"></span>
-<span class="w">    </span><span class="n">tmp</span><span class="p">?</span><span class="n">y</span><span class="w"> </span><span class="p">&lt;-</span><span class="w"> </span><span class="n">y</span><span class="w"></span>
-<span class="w">    </span><span class="n">tmp</span><span class="p">?</span><span class="n">name</span><span class="w"> </span><span class="p">&lt;-</span><span class="w"> </span><span class="n">name</span><span class="w"></span>
-<span class="w">    </span><span class="n">tmp</span><span class="w"></span>
-<span class="na">[</span>
-<span class="na">    GenericChart.ofTraceObject false (trace [[&quot;First&quot;; &quot;First&quot;;&quot;Second&quot;;&quot;Second&quot;]</span><span class="p">;[</span><span class="s">&quot;A&quot;</span><span class="p">;</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">;</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">;</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">]]</span><span class="w"> </span><span class="p">[</span><span class="m">2</span><span class="p">;</span><span class="m">3</span><span class="p">;</span><span class="m">1</span><span class="p">;</span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Adults&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="w">    </span><span class="n">GenericChart</span><span class="p">.</span><span class="n">ofTraceObject</span><span class="w"> </span><span class="k">false</span><span class="w"> </span><span class="p">(</span><span class="n">trace</span><span class="w"> </span><span class="p">[[</span><span class="s">&quot;First&quot;</span><span class="p">;</span><span class="w"> </span><span class="s">&quot;First&quot;</span><span class="p">;</span><span class="s">&quot;Second&quot;</span><span class="p">;</span><span class="s">&quot;Second&quot;</span><span class="p">];[</span><span class="s">&quot;A&quot;</span><span class="p">;</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">;</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">;</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">]]</span><span class="w"> </span><span class="p">[</span><span class="m">8</span><span class="p">;</span><span class="m">3</span><span class="p">;</span><span class="m">6</span><span class="p">;</span><span class="m">5</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;Children&quot;</span><span class="p">)</span><span class="w"></span>
-<span class="p">]</span><span class="w"></span>
-<span class="p">|&gt;</span><span class="w"> </span><span class="n">Chart</span><span class="p">.</span><span class="n">combine</span><span class="w"></span>
-<span class="p">|&gt;</span><span class="w"> </span><span class="n">Chart</span><span class="p">.</span><span class="n">withLayout</span><span class="p">(</span><span class="n">Layout</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">Title</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Title</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="s">&quot;Multi-category axis&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">Width</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">700</span><span class="p">))</span><span class="w"></span>
-</pre></div>
-
-     </div>
-</div>
-</div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-<div><div></div><div></div><div><strong>Installed Packages</strong><ul><li><span>Plotly.NET, 2.0.0</span></li><li><span>Plotly.NET.Interactive, 2.0.0</span></li></ul></div></div>
-</div>
-
-</div>
-
-<div class="jp-OutputArea-child">
-
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
-
-<div>
-    <div id="e3ceac8e-8e7f-4ba9-a1a0-bb4913719a6e"><!-- Plotly chart will be drawn inside this DIV --></div>
-<script type="text/javascript">
-
-            var renderPlotly_e3ceac8e8e7f4ba9a1a0bb4913719a6e = function() {
-            var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-2.6.3.min'}}) || require;
-            fsharpPlotlyRequire(['plotly'], function(Plotly) {
-
-            var data = [{"type":"bar","x":[["First","First","Second","Second"],["A","B","A","B"]],"y":[2,3,1,5],"name":"Adults"},{"type":"bar","x":[["First","First","Second","Second"],["A","B","A","B"]],"y":[8,3,6,5],"name":"Children"}];
-            var layout = {"title":{"text":"Multi-category axis"},"width":700};
-            var config = {};
-            Plotly.newPlot('e3ceac8e-8e7f-4ba9-a1a0-bb4913719a6e', data, layout, config);
-});
-            };
-            if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
-                var script = document.createElement("script");
-                script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
-                script.onload = function(){
-                    renderPlotly_e3ceac8e8e7f4ba9a1a0bb4913719a6e();
-                };
-                document.getElementsByTagName("head")[0].appendChild(script);
-            }
-            else {
-                renderPlotly_e3ceac8e8e7f4ba9a1a0bb4913719a6e();
-            }
-</script>
-
-    
-</div    
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-     <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">share</span><span class="w"> </span><span class="p">--</span><span class="k">from</span><span class="w"> </span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="n">itemTypeAgeGroup</span><span class="w"></span>
 
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
@@ -14882,18 +14712,6 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">itemPercentages</span><span class="p">.</span><span class="n">Zip</span><span class="p">(</span><span class="n">inventoryPercentages</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[]{</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">}).</span><span class="n">SelectMany</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">));</span><span class="w"></span>
 <span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span><span class="w"></span>
 <span class="w">    </span><span class="n">traces</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span>
-<span class="w">    </span><span class="c1">// charts.Add(</span>
-<span class="w">    </span><span class="c1">//     Chart2D.Chart.Column&lt;string, double, string, string, string&gt;(</span>
-<span class="w">    </span><span class="c1">//         Name:g.Key.ToString()  ,</span>
-<span class="w">    </span><span class="c1">//         keysValues: new List&lt;Tuple&lt;string,double&gt;&gt;(</span>
-<span class="w">    </span><span class="c1">//             //ageGroups.First(x=&gt;x.Key==&quot;Adult&quot;).Select(kvp =&gt; new Tuple&lt;string, double&gt;(((DateTime)kvp[&quot;ReportDate&quot;]).ToShortDateString(),(double) kvp[&quot;AgeGroupItemPercentage&quot;]))</span>
-<span class="w">    </span><span class="c1">//             g.GroupBy(x=&gt;((DateTime)x[&quot;ReportDate&quot;]).Year).Select(x=&gt; new Tuple&lt;string, double&gt;(x.Key.ToString(), x.Average(x=&gt;(double)x[&quot;AgeGroupItemPercentage&quot;])))</span>
-<span class="w">    </span><span class="c1">//         )//{new Tuple&lt;string,double&gt;(g.Key.Year.ToString(),g.Average(x=&gt;(double)x[&quot;AgeGroupItemPercentage&quot;]))}</span>
-<span class="w">            </span>
-<span class="w">    </span><span class="c1">//     )</span>
-<span class="w">    </span><span class="c1">//     .WithXAxisStyle(title: Title.init(),ShowGrid:false, ShowLine:true));</span>
 <span class="p">}</span><span class="w"></span>
 <span class="kt">var</span><span class="w"> </span><span class="n">layout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Layout</span><span class="p">.</span><span class="n">init</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span><span class="w"></span>
 <span class="w">    </span><span class="n">Title</span><span class="p">:</span><span class="w"> </span><span class="n">Title</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="s">&quot;Age Group Composition %&quot;</span><span class="p">),</span><span class="w"></span>
@@ -14901,8 +14719,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="w">    </span><span class="n">DragMode</span><span class="p">:</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">DragMode</span><span class="p">.</span><span class="n">Pan</span><span class="p">,</span><span class="w"></span>
 <span class="w">    </span><span class="n">BarMode</span><span class="p">:</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">BarMode</span><span class="p">.</span><span class="n">Stack</span><span class="w"></span>
 <span class="w">    </span><span class="p">,</span><span class="w">    </span><span class="n">Colorway</span><span class="p">:</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromColors</span><span class="p">(</span><span class="w"></span>
-<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="n">Color</span><span class="p">&gt;()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">CornflowerBlue</span><span class="p">),</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">SeaGreen</span><span class="p">)</span><span class="w"> </span>
-<span class="w">        </span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">Pink</span><span class="p">),</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">Yellow</span><span class="p">)})</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="n">Color</span><span class="p">&gt;()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">CornflowerBlue</span><span class="p">),</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">SeaGreen</span><span class="p">)})</span><span class="w"></span>
 <span class="p">);</span><span class="w"></span>
 
 <span class="err">#</span><span class="p">!</span><span class="n">html</span><span class="w"></span>
@@ -14953,29 +14770,29 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
 
 <div>
-    <div id="af876cc5-b3aa-44b7-95ed-bc7a34a6bb41"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id="69dafd1e-f075-477e-8694-8c193a8ef9a2"><!-- Plotly chart will be drawn inside this DIV --></div>
 <script type="text/javascript">
 
-            var renderPlotly_af876cc5b3aa44b795edbc7a34a6bb41 = function() {
+            var renderPlotly_69dafd1ef075477e86948c193a8ef9a2 = function() {
             var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-2.6.3.min'}}) || require;
             fsharpPlotlyRequire(['plotly'], function(Plotly) {
 
             var data = [{"type":"bar","x":[["2017","2017","2018","2018","2019","2019","2020","2020","2021","2021","2022","2022"],["Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage"]],"y":[89.08382530499375,76.83238672586884,87.28915645206678,73.72404164700504,88.7649885441778,76.33657201606331,89.89176629194094,78.06550880353045,89.77467474160117,77.90140716304033,89.73504168023112,77.94811471086322],"name":"Adult"},{"type":"bar","x":[["2017","2017","2018","2018","2019","2019","2020","2020","2021","2021","2022","2022"],["Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage"]],"y":[10.916174695006234,23.167613274131156,12.71084354793323,26.275958352994962,11.235011455822201,23.66342798393669,10.108233708059062,21.93449119646957,10.225325258398833,22.098592836959682,10.264958319768876,22.05188528913677],"name":"Juvenile"}];
-            var layout = {"width":1500,"height":600,"template":{"layout":{"title":{"x":0.05},"font":{"color":"rgba(42, 63, 95, 1.0)"},"paper_bgcolor":"rgba(255, 255, 255, 1.0)","plot_bgcolor":"rgba(229, 236, 246, 1.0)","autotypenumbers":"strict","colorscale":{"diverging":[[0.0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1.0,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"hovermode":"closest","hoverlabel":{"align":"left"},"coloraxis":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"geo":{"showland":true,"landcolor":"rgba(229, 236, 246, 1.0)","showlakes":true,"lakecolor":"rgba(255, 255, 255, 1.0)","subunitcolor":"rgba(255, 255, 255, 1.0)","bgcolor":"rgba(255, 255, 255, 1.0)"},"mapbox":{"style":"light"},"polar":{"bgcolor":"rgba(229, 236, 246, 1.0)","radialaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""},"angularaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""}},"scene":{"xaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"yaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"zaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true}},"ternary":{"aaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"baxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"caxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"bgcolor":"rgba(229, 236, 246, 1.0)"},"xaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"yaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"shapedefaults":{"line":{"color":"rgba(42, 63, 95, 1.0)"}},"colorway":["rgba(99, 110, 250, 1.0)","rgba(239, 85, 59, 1.0)","rgba(0, 204, 150, 1.0)","rgba(171, 99, 250, 1.0)","rgba(255, 161, 90, 1.0)","rgba(25, 211, 243, 1.0)","rgba(255, 102, 146, 1.0)","rgba(182, 232, 128, 1.0)","rgba(255, 151, 255, 1.0)","rgba(254, 203, 82, 1.0)"]},"data":{"bar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"error_x":{"color":"rgba(42, 63, 95, 1.0)"},"error_y":{"color":"rgba(42, 63, 95, 1.0)"}}],"barpolar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"carpet":[{"aaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"},"baxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"}}],"choropleth":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"heatmap":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"histogram2d":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"pie":[{"automargin":true}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatter3d":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"surface":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"table":[{"cells":{"fill":{"color":"rgba(235, 240, 248, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}},"header":{"fill":{"color":"rgba(200, 212, 227, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}}}]}},"title":{"text":"Age Group Composition %"},"colorway":["rgba(100, 149, 237, 1.0)","rgba(46, 139, 87, 1.0)","rgba(255, 192, 203, 1.0)","rgba(255, 255, 0, 1.0)"],"dragmode":"pan","barmode":"stack"};
+            var layout = {"width":1500,"height":600,"template":{"layout":{"title":{"x":0.05},"font":{"color":"rgba(42, 63, 95, 1.0)"},"paper_bgcolor":"rgba(255, 255, 255, 1.0)","plot_bgcolor":"rgba(229, 236, 246, 1.0)","autotypenumbers":"strict","colorscale":{"diverging":[[0.0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1.0,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"hovermode":"closest","hoverlabel":{"align":"left"},"coloraxis":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"geo":{"showland":true,"landcolor":"rgba(229, 236, 246, 1.0)","showlakes":true,"lakecolor":"rgba(255, 255, 255, 1.0)","subunitcolor":"rgba(255, 255, 255, 1.0)","bgcolor":"rgba(255, 255, 255, 1.0)"},"mapbox":{"style":"light"},"polar":{"bgcolor":"rgba(229, 236, 246, 1.0)","radialaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""},"angularaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""}},"scene":{"xaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"yaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"zaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true}},"ternary":{"aaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"baxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"caxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"bgcolor":"rgba(229, 236, 246, 1.0)"},"xaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"yaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"shapedefaults":{"line":{"color":"rgba(42, 63, 95, 1.0)"}},"colorway":["rgba(99, 110, 250, 1.0)","rgba(239, 85, 59, 1.0)","rgba(0, 204, 150, 1.0)","rgba(171, 99, 250, 1.0)","rgba(255, 161, 90, 1.0)","rgba(25, 211, 243, 1.0)","rgba(255, 102, 146, 1.0)","rgba(182, 232, 128, 1.0)","rgba(255, 151, 255, 1.0)","rgba(254, 203, 82, 1.0)"]},"data":{"bar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"error_x":{"color":"rgba(42, 63, 95, 1.0)"},"error_y":{"color":"rgba(42, 63, 95, 1.0)"}}],"barpolar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"carpet":[{"aaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"},"baxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"}}],"choropleth":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"heatmap":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"histogram2d":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"pie":[{"automargin":true}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatter3d":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"surface":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"table":[{"cells":{"fill":{"color":"rgba(235, 240, 248, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}},"header":{"fill":{"color":"rgba(200, 212, 227, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}}}]}},"title":{"text":"Age Group Composition %"},"colorway":["rgba(100, 149, 237, 1.0)","rgba(46, 139, 87, 1.0)"],"dragmode":"pan","barmode":"stack"};
             var config = {"responsive":true};
-            Plotly.newPlot('af876cc5-b3aa-44b7-95ed-bc7a34a6bb41', data, layout, config);
+            Plotly.newPlot('69dafd1e-f075-477e-8694-8c193a8ef9a2', data, layout, config);
 });
             };
             if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
                 var script = document.createElement("script");
                 script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
                 script.onload = function(){
-                    renderPlotly_af876cc5b3aa44b795edbc7a34a6bb41();
+                    renderPlotly_69dafd1ef075477e86948c193a8ef9a2();
                 };
                 document.getElementsByTagName("head")[0].appendChild(script);
             }
             else {
-                renderPlotly_af876cc5b3aa44b795edbc7a34a6bb41();
+                renderPlotly_69dafd1ef075477e86948c193a8ef9a2();
             }
 </script>
 
@@ -15000,16 +14817,35 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="p">--</span><span class="n">name</span><span class="w"> </span><span class="n">itemTypeFormat</span><span class="w"></span>
 
-<span class="n">SELECT</span><span class="w"> </span><span class="n">ReportDate</span><span class="p">,</span><span class="w"></span>
+<span class="p">;</span><span class="n">WITH</span><span class="w"> </span><span class="n">formatGroup_cte</span><span class="w"></span>
+<span class="n">AS</span><span class="w"> </span><span class="p">(</span><span class="n">SELECT</span><span class="w"> </span><span class="n">ReportDate</span><span class="p">,</span><span class="w"></span>
 <span class="w">       </span><span class="n">FormatGroup</span><span class="p">,</span><span class="w"></span>
 <span class="w">       </span><span class="n">Count</span><span class="p">(</span><span class="n">DISTINCT</span><span class="w"> </span><span class="n">bibnum</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">ItemCount</span><span class="p">,</span><span class="w"></span>
 <span class="w">       </span><span class="n">Sum</span><span class="p">(</span><span class="n">ei</span><span class="p">.</span><span class="n">itemcount</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">InventoryCount</span><span class="w"></span>
 <span class="n">FROM</span><span class="w">   </span><span class="n">ElementInventory</span><span class="w"> </span><span class="n">ei</span><span class="w"></span>
 <span class="w">       </span><span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">ItemType</span><span class="w"> </span><span class="n">it</span><span class="w"></span>
 <span class="w">               </span><span class="n">ON</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">ItemTypeCode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="n">Code</span><span class="w"></span>
-
+<span class="n">WHERE</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">ItemCount</span><span class="w"> </span><span class="p">&gt;</span><span class="w"> </span><span class="m">0</span><span class="w"></span>
 <span class="n">GROUP</span><span class="w">  </span><span class="n">BY</span><span class="w"> </span><span class="n">ReportDate</span><span class="p">,</span><span class="w"></span>
-<span class="w">          </span><span class="n">FormatGroup</span><span class="w"></span>
+<span class="w">          </span><span class="n">FormatGroup</span><span class="p">),</span><span class="w"></span>
+<span class="n">calculatedReportDateTotal_cte</span><span class="w"></span>
+<span class="nf">AS</span><span class="w"> </span><span class="p">(</span><span class="n">SELECT</span><span class="w"></span>
+<span class="w">  </span><span class="n">ReportDate</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">SUM</span><span class="p">(</span><span class="n">itemcount</span><span class="p">)</span><span class="w"> </span><span class="n">AS</span><span class="w"> </span><span class="n">itemCountSum</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">SUM</span><span class="p">(</span><span class="n">inventoryCount</span><span class="p">)</span><span class="w"> </span><span class="n">AS</span><span class="w"> </span><span class="n">inventoryCountSum</span><span class="w"></span>
+<span class="n">FROM</span><span class="w"> </span><span class="n">formatGroup_cte</span><span class="w"></span>
+<span class="n">GROUP</span><span class="w"> </span><span class="n">BY</span><span class="w"> </span><span class="n">ReportDate</span><span class="p">)</span><span class="w"></span>
+<span class="n">SELECT</span><span class="w"></span>
+<span class="w">  </span><span class="n">r</span><span class="p">.</span><span class="n">ReportDate</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">FormatGroup</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">CAST</span><span class="p">(</span><span class="n">ItemCount</span><span class="w"> </span><span class="n">AS</span><span class="w"> </span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">itemCountSum</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="n">AS</span><span class="w"> </span><span class="n">FormatGroupItemPercentage</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="n">CAST</span><span class="p">(</span><span class="n">InventoryCount</span><span class="w"> </span><span class="n">AS</span><span class="w"> </span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="n">inventoryCountSum</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="n">AS</span><span class="w"> </span><span class="n">FormatGroupInventoryPercentage</span><span class="w"></span>
+
+<span class="n">FROM</span><span class="w"> </span><span class="n">calculatedReportDateTotal_cte</span><span class="w"> </span><span class="n">r</span><span class="w"></span>
+<span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">FormatGroup_cte</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="w">  </span><span class="n">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">ReportDate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">ReportDate</span><span class="w"></span>
+
+<span class="n">ORDER</span><span class="w"> </span><span class="n">BY</span><span class="w"> </span><span class="n">ReportDate</span><span class="p">,</span><span class="w"> </span><span class="n">FormatGroup</span><span class="w"></span>
 </pre></div>
 
      </div>
@@ -15017,7 +14853,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -15031,11 +14867,286 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.FSharp.Core</span><span class="p">;</span><span class="w"></span>
 <span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET</span><span class="p">;</span><span class="w"></span>
 <span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET.LayoutObjects</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">years</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">itemTypeFormat</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Data</span><span class="p">.</span><span class="n">GroupBy</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;((</span><span class="n">DateTime</span><span class="p">)</span><span class="n">x</span><span class="p">[</span><span class="s">&quot;ReportDate&quot;</span><span class="p">]).</span><span class="n">Year</span><span class="p">).</span><span class="n">OrderBy</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="n">x</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">ToString</span><span class="p">())</span><span class="w"></span>
+<span class="p">.</span><span class="n">SelectMany</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="n">x</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">ToString</span><span class="p">(),</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">ToString</span><span class="p">()})).</span><span class="n">ToArray</span><span class="p">();</span><span class="w"></span>
+
+<span class="kt">string</span><span class="p">[]</span><span class="w"> </span><span class="n">inventoryCategory</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">Enumerable</span><span class="p">.</span><span class="n">Repeat</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="s">&quot;Item Percentage&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Inventory Percentage&quot;</span><span class="p">},</span><span class="w"> </span><span class="n">years</span><span class="p">.</span><span class="n">Length</span><span class="p">/</span><span class="m">2</span><span class="p">).</span><span class="n">SelectMany</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="n">x</span><span class="p">)).</span><span class="n">ToArray</span><span class="p">();</span><span class="w"></span>
+<span class="n">List</span><span class="p">&lt;</span><span class="n">Trace</span><span class="p">&gt;</span><span class="w"> </span><span class="n">traces</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="p">();</span><span class="w"></span>
+
+<span class="k">foreach</span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">itemTypeFormat</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Data</span><span class="p">.</span><span class="n">GroupBy</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="s">&quot;FormatGroup&quot;</span><span class="p">]).</span><span class="n">OrderBy</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="n">x</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">ToString</span><span class="p">())){</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">itemPercentages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">GroupBy</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;((</span><span class="n">DateTime</span><span class="p">)</span><span class="n">x</span><span class="p">[</span><span class="s">&quot;ReportDate&quot;</span><span class="p">]).</span><span class="n">Year</span><span class="p">).</span><span class="n">Select</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Average</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;(</span><span class="kt">double</span><span class="p">)</span><span class="n">x</span><span class="p">[</span><span class="s">&quot;FormatGroupItemPercentage&quot;</span><span class="p">]));</span><span class="w"></span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">inventoryPercentages</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">GroupBy</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;((</span><span class="n">DateTime</span><span class="p">)</span><span class="n">x</span><span class="p">[</span><span class="s">&quot;ReportDate&quot;</span><span class="p">]).</span><span class="n">Year</span><span class="p">).</span><span class="n">Select</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Average</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;(</span><span class="kt">double</span><span class="p">)</span><span class="n">x</span><span class="p">[</span><span class="s">&quot;FormatGroupInventoryPercentage&quot;</span><span class="p">]));</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">Trace</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Trace</span><span class="p">(</span><span class="s">&quot;bar&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[][]{</span><span class="n">years</span><span class="p">,</span><span class="w"> </span><span class="n">inventoryCategory</span><span class="p">}</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">itemPercentages</span><span class="p">.</span><span class="n">Zip</span><span class="p">(</span><span class="n">inventoryPercentages</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[]{</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">}).</span><span class="n">SelectMany</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">t</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">traces</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="kt">var</span><span class="w"> </span><span class="n">layout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Layout</span><span class="p">.</span><span class="n">init</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span><span class="w"></span>
+<span class="w">    </span><span class="n">Title</span><span class="p">:</span><span class="w"> </span><span class="n">Title</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="s">&quot;Format Group Composition %&quot;</span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">Width</span><span class="p">:</span><span class="m">1500</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">DragMode</span><span class="p">:</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">DragMode</span><span class="p">.</span><span class="n">Pan</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="n">BarMode</span><span class="p">:</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">BarMode</span><span class="p">.</span><span class="n">Stack</span><span class="w"></span>
+<span class="w">    </span><span class="p">,</span><span class="w">    </span><span class="n">Colorway</span><span class="p">:</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromColors</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="n">Color</span><span class="p">&gt;()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">DarkTurquoise</span><span class="p">),</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">CornflowerBlue</span><span class="p">),</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">PaleVioletRed</span><span class="p">),</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">GoldenRod</span><span class="p">)})</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+
+<span class="err">#</span><span class="p">!</span><span class="n">html</span><span class="w"></span>
+<span class="p">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">id</span><span class="p">=</span><span class="s">&quot;formatGroup&quot;</span><span class="p">&gt;&lt;/</span><span class="n">a</span><span class="p">&gt;</span><span class="w"></span>
+
+
+<span class="err">#</span><span class="p">!</span><span class="n">csharp</span><span class="w"></span>
+
+<span class="n">GenericChart</span><span class="p">.</span><span class="n">combine</span><span class="p">(</span><span class="n">traces</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="w"> </span><span class="n">GenericChart</span><span class="p">.</span><span class="n">ofTraceObject</span><span class="p">(</span><span class="k">true</span><span class="p">,</span><span class="n">x</span><span class="p">)))</span><span class="w"></span>
+<span class="p">.</span><span class="n">WithLayout</span><span class="p">(</span><span class="n">layout</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<a id="formatGroup"></a>
+
+
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<div>
+    <div id="fdc8bb06-e464-4a30-8d11-50ef86dd16c9"><!-- Plotly chart will be drawn inside this DIV --></div>
+<script type="text/javascript">
+
+            var renderPlotly_fdc8bb06e4644a308d1150ef86dd16c9 = function() {
+            var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-2.6.3.min'}}) || require;
+            fsharpPlotlyRequire(['plotly'], function(Plotly) {
+
+            var data = [{"type":"bar","x":[["2017","2017","2018","2018","2019","2019","2020","2020","2021","2021","2022","2022"],["Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage"]],"y":[0.0010637216321760584,0.058521541687555,0.0012590594574431629,0.0788677556779754,0.0013497437299940015,0.0791782121409962,0.0015368738661861827,0.07947490049087937,0.0015842946920813904,0.08781286010366522,0.001875849358661316,0.09802182211874282],"name":"Equipment"},{"type":"bar","x":[["2017","2017","2018","2018","2019","2019","2020","2020","2021","2021","2022","2022"],["Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage"]],"y":[16.732131730320212,18.69337376368912,11.543021259135683,15.840560880668905,16.331369141744588,16.81146239188198,19.581806129832188,16.974827099638272,19.423415382120464,16.467393190755505,19.23163261214227,15.902661153622509],"name":"Media"},{"type":"bar","x":[["2017","2017","2018","2018","2019","2019","2020","2020","2021","2021","2022","2022"],["Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage"]],"y":[0.012366374290998485,0.004398275563285953,0.011945180815989095,0.004247641300487744,0.009706242043682653,0.003497268038881986],"name":"Other"},{"type":"bar","x":[["2017","2017","2018","2018","2019","2019","2020","2020","2021","2021","2022","2022"],["Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage","Item Percentage","Inventory Percentage"]],"y":[83.26268242328395,81.2466386027689,88.44377450059086,84.07632372235264,83.66242799350358,83.10761076195759,80.41665699630163,82.94569799987086,80.57500032318745,83.44479394914083,80.76649153849908,83.99931702425874],"name":"Print"}];
+            var layout = {"width":1500,"height":600,"template":{"layout":{"title":{"x":0.05},"font":{"color":"rgba(42, 63, 95, 1.0)"},"paper_bgcolor":"rgba(255, 255, 255, 1.0)","plot_bgcolor":"rgba(229, 236, 246, 1.0)","autotypenumbers":"strict","colorscale":{"diverging":[[0.0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1.0,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"hovermode":"closest","hoverlabel":{"align":"left"},"coloraxis":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"geo":{"showland":true,"landcolor":"rgba(229, 236, 246, 1.0)","showlakes":true,"lakecolor":"rgba(255, 255, 255, 1.0)","subunitcolor":"rgba(255, 255, 255, 1.0)","bgcolor":"rgba(255, 255, 255, 1.0)"},"mapbox":{"style":"light"},"polar":{"bgcolor":"rgba(229, 236, 246, 1.0)","radialaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""},"angularaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""}},"scene":{"xaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"yaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"zaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true}},"ternary":{"aaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"baxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"caxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"bgcolor":"rgba(229, 236, 246, 1.0)"},"xaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"yaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"shapedefaults":{"line":{"color":"rgba(42, 63, 95, 1.0)"}},"colorway":["rgba(99, 110, 250, 1.0)","rgba(239, 85, 59, 1.0)","rgba(0, 204, 150, 1.0)","rgba(171, 99, 250, 1.0)","rgba(255, 161, 90, 1.0)","rgba(25, 211, 243, 1.0)","rgba(255, 102, 146, 1.0)","rgba(182, 232, 128, 1.0)","rgba(255, 151, 255, 1.0)","rgba(254, 203, 82, 1.0)"]},"data":{"bar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"error_x":{"color":"rgba(42, 63, 95, 1.0)"},"error_y":{"color":"rgba(42, 63, 95, 1.0)"}}],"barpolar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"carpet":[{"aaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"},"baxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"}}],"choropleth":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"heatmap":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"histogram2d":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"pie":[{"automargin":true}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatter3d":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"surface":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"table":[{"cells":{"fill":{"color":"rgba(235, 240, 248, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}},"header":{"fill":{"color":"rgba(200, 212, 227, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}}}]}},"title":{"text":"Format Group Composition %"},"colorway":["rgba(0, 206, 209, 1.0)","rgba(100, 149, 237, 1.0)","rgba(219, 112, 147, 1.0)","rgba(218, 165, 32, 1.0)"],"dragmode":"pan","barmode":"stack"};
+            var config = {"responsive":true};
+            Plotly.newPlot('fdc8bb06-e464-4a30-8d11-50ef86dd16c9', data, layout, config);
+});
+            };
+            if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
+                var script = document.createElement("script");
+                script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
+                script.onload = function(){
+                    renderPlotly_fdc8bb06e4644a308d1150ef86dd16c9();
+                };
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+            else {
+                renderPlotly_fdc8bb06e4644a308d1150ef86dd16c9();
+            }
+</script>
+
+    
+</div    
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>the item type 'other' was only briefly used from 2017 to 2019.  77 Titles were see to have other at one point during this time.  Then that type was no longer used and items were switch to 'print' item type</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="p">--</span><span class="n">name</span><span class="w"> </span><span class="n">longRunningPeak</span><span class="w"></span>
+
+<span class="p">;</span><span class="n">WITH</span><span class="w"> </span><span class="n">longrunningpeak_cte</span><span class="w"></span>
+<span class="w">     </span><span class="n">AS</span><span class="w"> </span><span class="p">(</span><span class="n">SELECT</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">bibnum</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="n">Min</span><span class="p">(</span><span class="n">ed</span><span class="p">.</span><span class="n">reportdate</span><span class="p">)</span><span class="w">                                      </span><span class="n">AS</span><span class="w"></span>
+<span class="w">                </span><span class="n">minPeak</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="n">Max</span><span class="p">(</span><span class="n">ed</span><span class="p">.</span><span class="n">reportdate</span><span class="p">)</span><span class="w">                                      </span><span class="n">AS</span><span class="w"></span>
+<span class="w">                </span><span class="n">maxPeak</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="n">Datediff</span><span class="p">(</span><span class="n">month</span><span class="p">,</span><span class="w"> </span><span class="n">Min</span><span class="p">(</span><span class="n">ed</span><span class="p">.</span><span class="n">reportdate</span><span class="p">),</span><span class="w"> </span><span class="n">Max</span><span class="p">(</span><span class="n">ed</span><span class="p">.</span><span class="n">reportdate</span><span class="p">))</span><span class="w"> </span><span class="n">AS</span><span class="w"></span>
+<span class="w">                </span><span class="n">amountPeak</span><span class="w"></span>
+<span class="w">         </span><span class="n">FROM</span><span class="w">   </span><span class="n">elementdetail</span><span class="w"> </span><span class="n">ed</span><span class="w"></span>
+<span class="w">                </span><span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">elementinventory</span><span class="w"> </span><span class="n">ei</span><span class="w"></span>
+<span class="w">                        </span><span class="n">ON</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">bibnum</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">bibnum</span><span class="w"></span>
+<span class="w">                           </span><span class="n">AND</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">reportdate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">reportdate</span><span class="w"></span>
+<span class="w">                </span><span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">itemtype</span><span class="w"> </span><span class="n">it</span><span class="w"></span>
+<span class="w">                        </span><span class="n">ON</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">itemtypecode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="n">code</span><span class="w"></span>
+<span class="w">         </span><span class="n">WHERE</span><span class="w">  </span><span class="n">it</span><span class="p">.</span><span class="n">code</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="err">&#39;</span><span class="n">pkbknh</span><span class="err">&#39;</span><span class="w"></span>
+<span class="w">         </span><span class="n">GROUP</span><span class="w">  </span><span class="n">BY</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">bibnum</span><span class="p">)</span><span class="w"></span>
+<span class="n">SELECT</span><span class="w"> </span><span class="n">TOP</span><span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="n">lrp</span><span class="p">.*,</span><span class="w"></span>
+<span class="w">              </span><span class="n">t</span><span class="p">.</span><span class="n">title</span><span class="w"></span>
+<span class="n">FROM</span><span class="w">   </span><span class="n">longrunningpeak_cte</span><span class="w"> </span><span class="n">lrp</span><span class="w"></span>
+<span class="w">       </span><span class="n">INNER</span><span class="w"> </span><span class="nf">JOIN</span><span class="w"> </span><span class="p">(</span><span class="n">SELECT</span><span class="w"> </span><span class="n">bibnum</span><span class="p">,</span><span class="w"></span>
+<span class="w">                          </span><span class="n">Max</span><span class="p">(</span><span class="n">titleid</span><span class="p">)</span><span class="w"> </span><span class="n">AS</span><span class="w"> </span><span class="n">TitleId</span><span class="w"></span>
+<span class="w">                   </span><span class="n">FROM</span><span class="w">   </span><span class="n">elementdetail</span><span class="w"></span>
+<span class="w">                   </span><span class="n">GROUP</span><span class="w">  </span><span class="n">BY</span><span class="w"> </span><span class="n">bibnum</span><span class="p">)</span><span class="w"> </span><span class="n">ed</span><span class="w"></span>
+<span class="w">               </span><span class="n">ON</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">bibnum</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">lrp</span><span class="p">.</span><span class="n">bibnum</span><span class="w"></span>
+<span class="w">       </span><span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="n">t</span><span class="w"></span>
+<span class="w">               </span><span class="n">ON</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">titleid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">titleid</span><span class="w"></span>
+<span class="n">ORDER</span><span class="w">  </span><span class="n">BY</span><span class="w"> </span><span class="n">amountpeak</span><span class="w"> </span><span class="n">DESC</span><span class="w"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">share</span><span class="w"> </span><span class="p">--</span><span class="k">from</span><span class="w"> </span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="n">longRunningPeak</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.FSharp.Core</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET.LayoutObjects</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Plotly</span><span class="p">.</span><span class="n">NET</span><span class="p">.</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">Range</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">ChartDomain</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Plotly</span><span class="p">.</span><span class="n">NET</span><span class="p">.</span><span class="n">ChartDomain</span><span class="p">.</span><span class="n">Chart</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="p">=</span><span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="s">&quot;Title&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Months as Peak Pick&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="kt">var</span><span class="w"> </span><span class="n">peaksTable</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ChartDomain</span><span class="p">.</span><span class="n">Table</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;,</span><span class="kt">string</span><span class="p">&gt;(</span><span class="w"></span>
+<span class="w">    </span><span class="n">header</span><span class="w"></span>
+<span class="w">    </span><span class="p">,</span><span class="n">longRunningPeak</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Data</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="s">&quot;title&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">(),</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="s">&quot;amountPeak&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">()})</span><span class="w"></span>
+<span class="w">    </span><span class="p">,</span><span class="n">MultiColumnWidth</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[]{.</span><span class="m">85</span><span class="p">,.</span><span class="m">15</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">,</span><span class="n">CellsAlign</span><span class="p">:</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">HorizontalAlign</span><span class="p">.</span><span class="n">Left</span><span class="w"></span>
+<span class="w">    </span>
+<span class="p">).</span><span class="n">WithLayout</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">Layout</span><span class="p">.</span><span class="n">init</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span><span class="w"></span>
+<span class="w">        </span><span class="n">Width</span><span class="p">:</span><span class="m">770</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">Height</span><span class="p">:</span><span class="m">235</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">Margin</span><span class="p">:</span><span class="n">Margin</span><span class="p">.</span><span class="n">init</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">&gt;(</span><span class="n">Top</span><span class="p">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">Left</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">Bottom</span><span class="p">:</span><span class="m">10</span><span class="p">)</span><span class="w"></span>
+<span class="p">));</span><span class="w"></span>
+
+
+<span class="err">#</span><span class="p">!</span><span class="n">html</span><span class="w"></span>
+<span class="p">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">id</span><span class="p">=</span><span class="s">&quot;longRunningPeaks&quot;</span><span class="p">&gt;&lt;/</span><span class="n">a</span><span class="p">&gt;</span><span class="w"></span>
+
+<span class="err">#</span><span class="p">!</span><span class="n">csharp</span><span class="w"></span>
+<span class="n">peaksTable</span><span class="w"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<a id="longRunningPeaks"></a>
+
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<div>
+    <div id="7b573093-789a-4c5f-8964-67a87bf3564a"><!-- Plotly chart will be drawn inside this DIV --></div>
+<script type="text/javascript">
+
+            var renderPlotly_7b573093789a4c5f896467a87bf3564a = function() {
+            var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-2.6.3.min'}}) || require;
+            fsharpPlotlyRequire(['plotly'], function(Plotly) {
+
+            var data = [{"type":"table","columnwidth":[0.85,0.15],"cells":{"align":"left","fill":{},"line":{},"values":[["No time to spare : thinking about what matters / Ursula K. Le Guin ; [introduction by Karen Joy Fowler].","Women & power : a manifesto / Mary Beard.","Enlightenment now : the case for reason, science, humanism, and progress / Steven Pinker.","Down the river unto the sea / Walter Mosley.","To die but once / Jacqueline Winspear.","The perfect nanny : a novel / Leila Slimani ; translated from the French by Sam Taylor.","Things that make white people uncomfortable / Michael Bennett and Dave Zirin ; foreword by Martellus Bennett.","Fascism : a warning / Madeleine Albright ; with Bill Woodward.","Not that bad : dispatches from rape culture / edited by Roxane Gay.","Varina : a novel / Charles Frazier."],["52","51","50","49","49","49","48","48","48","48"]]},"header":{"fill":{},"line":{},"values":["Title","Months as Peak Pick"]}}];
+            var layout = {"width":770,"height":235,"template":{"layout":{"title":{"x":0.05},"font":{"color":"rgba(42, 63, 95, 1.0)"},"paper_bgcolor":"rgba(255, 255, 255, 1.0)","plot_bgcolor":"rgba(229, 236, 246, 1.0)","autotypenumbers":"strict","colorscale":{"diverging":[[0.0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1.0,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"hovermode":"closest","hoverlabel":{"align":"left"},"coloraxis":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"geo":{"showland":true,"landcolor":"rgba(229, 236, 246, 1.0)","showlakes":true,"lakecolor":"rgba(255, 255, 255, 1.0)","subunitcolor":"rgba(255, 255, 255, 1.0)","bgcolor":"rgba(255, 255, 255, 1.0)"},"mapbox":{"style":"light"},"polar":{"bgcolor":"rgba(229, 236, 246, 1.0)","radialaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""},"angularaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""}},"scene":{"xaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"yaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"zaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true}},"ternary":{"aaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"baxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"caxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"bgcolor":"rgba(229, 236, 246, 1.0)"},"xaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"yaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"shapedefaults":{"line":{"color":"rgba(42, 63, 95, 1.0)"}},"colorway":["rgba(99, 110, 250, 1.0)","rgba(239, 85, 59, 1.0)","rgba(0, 204, 150, 1.0)","rgba(171, 99, 250, 1.0)","rgba(255, 161, 90, 1.0)","rgba(25, 211, 243, 1.0)","rgba(255, 102, 146, 1.0)","rgba(182, 232, 128, 1.0)","rgba(255, 151, 255, 1.0)","rgba(254, 203, 82, 1.0)"]},"data":{"bar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"error_x":{"color":"rgba(42, 63, 95, 1.0)"},"error_y":{"color":"rgba(42, 63, 95, 1.0)"}}],"barpolar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"carpet":[{"aaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"},"baxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"}}],"choropleth":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"heatmap":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"histogram2d":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"pie":[{"automargin":true}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatter3d":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"surface":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"table":[{"cells":{"fill":{"color":"rgba(235, 240, 248, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}},"header":{"fill":{"color":"rgba(200, 212, 227, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}}}]}},"margin":{"l":10,"r":10,"t":10,"b":10}};
+            var config = {"responsive":true};
+            Plotly.newPlot('7b573093-789a-4c5f-8964-67a87bf3564a', data, layout, config);
+});
+            };
+            if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
+                var script = document.createElement("script");
+                script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
+                script.onload = function(){
+                    renderPlotly_7b573093789a4c5f896467a87bf3564a();
+                };
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+            else {
+                renderPlotly_7b573093789a4c5f896467a87bf3564a();
+            }
+</script>
+
+    
+</div    
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -15046,22 +15157,354 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="p">--</span><span class="n">name</span><span class="w"> </span><span class="n">itemCollectionFormat</span><span class="w"></span>
+<div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="p">--</span><span class="n">name</span><span class="w"> </span><span class="n">filteredAllAuthors</span><span class="w"></span>
 
-<span class="p">--</span><span class="w"> </span><span class="n">SELECT</span><span class="w"> </span><span class="n">ReportDate</span><span class="p">,</span><span class="w"></span>
-<span class="p">--</span><span class="w">        </span><span class="n">FormatGroup</span><span class="p">,</span><span class="w"></span>
-<span class="p">--</span><span class="w">        </span><span class="n">Count</span><span class="p">(</span><span class="n">DISTINCT</span><span class="w"> </span><span class="n">bibnum</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">ItemCount</span><span class="p">,</span><span class="w"></span>
-<span class="p">--</span><span class="w">        </span><span class="n">Sum</span><span class="p">(</span><span class="n">ei</span><span class="p">.</span><span class="n">itemcount</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">InventoryCount</span><span class="w"></span>
-<span class="p">--</span><span class="w"> </span><span class="n">FROM</span><span class="w">   </span><span class="n">ElementInventory</span><span class="w"> </span><span class="n">ei</span><span class="w"></span>
-<span class="p">--</span><span class="w">        </span><span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">ItemCollection</span><span class="w"> </span><span class="n">ic</span><span class="w"></span>
-<span class="p">--</span><span class="w">                </span><span class="n">ON</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">ItemCollectionCode</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ic</span><span class="p">.</span><span class="n">Code</span><span class="w"></span>
-<span class="p">--</span><span class="w"> </span><span class="n">GROUP</span><span class="w">  </span><span class="n">BY</span><span class="w"> </span><span class="n">ReportDate</span><span class="p">,</span><span class="w"></span>
-<span class="p">--</span><span class="w">           </span><span class="n">FormatGroup</span><span class="w"></span>
+<span class="p">;</span><span class="w"> </span><span class="n">WITH</span><span class="w"> </span><span class="n">authorcount_cte</span><span class="w"></span>
+<span class="n">AS</span><span class="w"> </span><span class="p">(</span><span class="n">SELECT</span><span class="w"> </span><span class="n">authorid</span><span class="p">,</span><span class="w"></span>
+<span class="w">           </span><span class="n">Count</span><span class="p">(*)</span><span class="w"> </span><span class="n">authorCount</span><span class="w"></span>
+<span class="w">    </span><span class="n">FROM</span><span class="w">   </span><span class="n">elementdetail</span><span class="w"></span>
+<span class="w">    </span><span class="n">WHERE</span><span class="w">  </span><span class="n">reportdate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="err">&#39;</span><span class="m">2022</span><span class="p">-</span><span class="m">05</span><span class="p">-</span><span class="m">01</span><span class="err">&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="n">GROUP</span><span class="w">  </span><span class="n">BY</span><span class="w"> </span><span class="n">authorid</span><span class="p">)</span><span class="w"></span>
+<span class="n">SELECT</span><span class="w"> </span><span class="n">DISTINCT</span><span class="w"> </span><span class="nf">TOP</span><span class="w"> </span><span class="p">(</span><span class="m">10</span><span class="p">)</span><span class="w">  </span><span class="n">acc</span><span class="p">.*,</span><span class="w"></span>
+<span class="w">           </span><span class="n">a</span><span class="p">.</span><span class="n">NAME</span><span class="w"></span>
+<span class="p">--,</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="n">Description</span><span class="w"> </span>
+<span class="p">--,</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">Title</span><span class="w"> </span>
+<span class="n">FROM</span><span class="w">   </span><span class="n">authorcount_cte</span><span class="w"> </span><span class="n">acc</span><span class="w"></span>
+<span class="w">  </span><span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="n">a</span><span class="w"></span>
+<span class="w">          </span><span class="n">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">authorid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">acc</span><span class="p">.</span><span class="n">authorid</span><span class="w"></span>
+<span class="w">  </span><span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">elementdetail</span><span class="w"> </span><span class="n">ed</span><span class="w"></span>
+<span class="w">          </span><span class="n">ON</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="n">authorid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">authorid</span><span class="w"></span>
+<span class="w">             </span><span class="n">AND</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">reportdate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="err">&#39;</span><span class="m">2022</span><span class="p">-</span><span class="m">05</span><span class="p">-</span><span class="m">01</span><span class="err">&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="p">--</span><span class="n">inner</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">Title</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">TitleId</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">TitleId</span><span class="w"></span>
+<span class="w">  </span><span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">elementinventory</span><span class="w"> </span><span class="n">ei</span><span class="w"></span>
+<span class="w">          </span><span class="n">ON</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">bibnum</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">bibnum</span><span class="w"></span>
+<span class="w">             </span><span class="n">AND</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">reportdate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="err">&#39;</span><span class="m">2022</span><span class="p">-</span><span class="m">05</span><span class="p">-</span><span class="m">01</span><span class="err">&#39;</span><span class="w"></span>
+<span class="w">  </span><span class="n">INNER</span><span class="w"> </span><span class="n">JOIN</span><span class="w"> </span><span class="n">itemtype</span><span class="w"> </span><span class="n">it</span><span class="w"></span>
+<span class="w">          </span><span class="n">ON</span><span class="w"> </span><span class="n">it</span><span class="p">.</span><span class="n">code</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">itemtypecode</span><span class="w"></span>
+<span class="n">WHERE</span><span class="w">  </span><span class="n">a</span><span class="p">.</span><span class="n">authorid</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="n">IN</span><span class="p">(</span><span class="w"> </span><span class="m">30861</span><span class="w"> </span><span class="p">--</span><span class="n">blank</span><span class="w"></span>
+<span class="w">                     </span><span class="p">,</span><span class="w"> </span><span class="m">264</span><span class="p">--</span><span class="n">Geological</span><span class="w"> </span><span class="n">Survey</span><span class="w"> </span><span class="p">(</span><span class="n">U</span><span class="p">.</span><span class="n">S</span><span class="p">.)</span><span class="w"></span>
+<span class="w">                    </span><span class="p">)</span><span class="w"></span>
+<span class="w">  </span><span class="n">AND</span><span class="w"> </span><span class="n">NAME</span><span class="w"> </span><span class="n">NOT</span><span class="w"> </span><span class="nf">LIKE</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="err">&#39;</span><span class="n">United</span><span class="w"> </span><span class="n">States</span><span class="p">%</span><span class="err">&#39;</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="p">--</span><span class="n">and</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="p">(</span><span class="err">&#39;</span><span class="n">United</span><span class="w"> </span><span class="n">States</span><span class="p">.</span><span class="w"> </span><span class="n">Congress</span><span class="p">.%</span><span class="err">&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="p">--</span><span class="n">and</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">not</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="p">(</span><span class="err">&#39;</span><span class="n">United</span><span class="w"> </span><span class="n">States</span><span class="p">.</span><span class="w"> </span><span class="n">President</span><span class="p">%</span><span class="err">&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">ORDER</span><span class="w">  </span><span class="n">BY</span><span class="w"> </span><span class="n">authorcount</span><span class="w"> </span><span class="n">DESC</span><span class="w"></span>
 </pre></div>
 
      </div>
 </div>
 </div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">share</span><span class="w"> </span><span class="p">--</span><span class="k">from</span><span class="w"> </span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="n">filteredAllAuthors</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.FSharp.Core</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET.LayoutObjects</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Plotly</span><span class="p">.</span><span class="n">NET</span><span class="p">.</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">Range</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">ChartDomain</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Plotly</span><span class="p">.</span><span class="n">NET</span><span class="p">.</span><span class="n">ChartDomain</span><span class="p">.</span><span class="n">Chart</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">header</span><span class="w"> </span><span class="p">=</span><span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="s">&quot;Author&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Item Count&quot;</span><span class="p">};</span><span class="w"></span>
+<span class="kt">var</span><span class="w"> </span><span class="n">authorsTable</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ChartDomain</span><span class="p">.</span><span class="n">Table</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="p">,</span><span class="w"> </span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">&gt;,</span><span class="kt">string</span><span class="p">&gt;(</span><span class="w"></span>
+<span class="w">    </span><span class="n">header</span><span class="w"></span>
+<span class="w">    </span><span class="p">,</span><span class="n">filteredAllAuthors</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Data</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">string</span><span class="p">[]{</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="s">&quot;NAME&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">(),</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="s">&quot;authorCount&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">()})</span><span class="w"></span>
+<span class="w">    </span><span class="p">,</span><span class="n">MultiColumnWidth</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="p">[]{.</span><span class="m">85</span><span class="p">,.</span><span class="m">15</span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">,</span><span class="n">CellsAlign</span><span class="p">:</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">HorizontalAlign</span><span class="p">.</span><span class="n">Left</span><span class="w"></span>
+<span class="w">    </span>
+<span class="p">).</span><span class="n">WithLayout</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="n">Layout</span><span class="p">.</span><span class="n">init</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span><span class="w"></span>
+<span class="w">        </span><span class="n">Width</span><span class="p">:</span><span class="m">770</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">Height</span><span class="p">:</span><span class="m">235</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="n">Margin</span><span class="p">:</span><span class="n">Margin</span><span class="p">.</span><span class="n">init</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">,</span><span class="kt">int</span><span class="p">&gt;(</span><span class="n">Top</span><span class="p">:</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">Left</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">Right</span><span class="p">:</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">Bottom</span><span class="p">:</span><span class="m">10</span><span class="p">)</span><span class="w"></span>
+<span class="p">));</span><span class="w"></span>
+
+
+<span class="err">#</span><span class="p">!</span><span class="n">html</span><span class="w"></span>
+<span class="p">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">id</span><span class="p">=</span><span class="s">&quot;filteredAllAuthors&quot;</span><span class="p">&gt;&lt;/</span><span class="n">a</span><span class="p">&gt;</span><span class="w"></span>
+
+<span class="err">#</span><span class="p">!</span><span class="n">csharp</span><span class="w"></span>
+<span class="n">authorsTable</span><span class="w"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<a id="longRunningPeaks"></a>
+
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<div>
+    <div id="b6403708-9f41-493c-bfa3-4a0a6f995018"><!-- Plotly chart will be drawn inside this DIV --></div>
+<script type="text/javascript">
+
+            var renderPlotly_b64037089f41493cbfa34a0a6f995018 = function() {
+            var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-2.6.3.min'}}) || require;
+            fsharpPlotlyRequire(['plotly'], function(Plotly) {
+
+            var data = [{"type":"table","columnwidth":[0.85,0.15],"cells":{"align":"left","fill":{},"line":{},"values":[["Bach, Johann Sebastian, 1685-1750","Patterson, James, 1947-","Seattle (Wash.). Department of Construction and Land Use","Mozart, Wolfgang Amadeus, 1756-1791","Shakespeare, William, 1564-1616","Seattle (Wash.). Department of Planning and Development","Beethoven, Ludwig van, 1770-1827","Municipality of Metropolitan Seattle.","Christie, Agatha, 1890-1976","Municipal Reference Library (Seattle, Wash.)"],["612","552","460","398","397","344","290","284","228","226"]]},"header":{"fill":{},"line":{},"values":["Author","Item Count"]}}];
+            var layout = {"width":770,"height":235,"template":{"layout":{"title":{"x":0.05},"font":{"color":"rgba(42, 63, 95, 1.0)"},"paper_bgcolor":"rgba(255, 255, 255, 1.0)","plot_bgcolor":"rgba(229, 236, 246, 1.0)","autotypenumbers":"strict","colorscale":{"diverging":[[0.0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1.0,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"hovermode":"closest","hoverlabel":{"align":"left"},"coloraxis":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"geo":{"showland":true,"landcolor":"rgba(229, 236, 246, 1.0)","showlakes":true,"lakecolor":"rgba(255, 255, 255, 1.0)","subunitcolor":"rgba(255, 255, 255, 1.0)","bgcolor":"rgba(255, 255, 255, 1.0)"},"mapbox":{"style":"light"},"polar":{"bgcolor":"rgba(229, 236, 246, 1.0)","radialaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""},"angularaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""}},"scene":{"xaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"yaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"zaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true}},"ternary":{"aaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"baxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"caxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"bgcolor":"rgba(229, 236, 246, 1.0)"},"xaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"yaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"shapedefaults":{"line":{"color":"rgba(42, 63, 95, 1.0)"}},"colorway":["rgba(99, 110, 250, 1.0)","rgba(239, 85, 59, 1.0)","rgba(0, 204, 150, 1.0)","rgba(171, 99, 250, 1.0)","rgba(255, 161, 90, 1.0)","rgba(25, 211, 243, 1.0)","rgba(255, 102, 146, 1.0)","rgba(182, 232, 128, 1.0)","rgba(255, 151, 255, 1.0)","rgba(254, 203, 82, 1.0)"]},"data":{"bar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"error_x":{"color":"rgba(42, 63, 95, 1.0)"},"error_y":{"color":"rgba(42, 63, 95, 1.0)"}}],"barpolar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"carpet":[{"aaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"},"baxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"}}],"choropleth":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"heatmap":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"histogram2d":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"pie":[{"automargin":true}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatter3d":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"surface":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"table":[{"cells":{"fill":{"color":"rgba(235, 240, 248, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}},"header":{"fill":{"color":"rgba(200, 212, 227, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}}}]}},"margin":{"l":10,"r":10,"t":10,"b":10}};
+            var config = {"responsive":true};
+            Plotly.newPlot('b6403708-9f41-493c-bfa3-4a0a6f995018', data, layout, config);
+});
+            };
+            if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
+                var script = document.createElement("script");
+                script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
+                script.onload = function(){
+                    renderPlotly_b64037089f41493cbfa34a0a6f995018();
+                };
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+            else {
+                renderPlotly_b64037089f41493cbfa34a0a6f995018();
+            }
+</script>
+
+    
+</div    
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>The large amount items is also due to different content types.  For Bach there's sheet music, audio CD, audio records, and books
+for Agatha Christie there's translations, anthologies, and different versions</p>
+
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="p">--</span><span class="n">name</span><span class="w"> </span><span class="n">trumpAuthors</span><span class="w"></span>
+
+
+<span class="p">;</span><span class="n">with</span><span class="w"> </span><span class="n">auth_cte</span><span class="w"> </span><span class="k">as</span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">author</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="p">(</span><span class="n">Name</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">&#39;</span><span class="p">%</span><span class="n">carlson</span><span class="p">%</span><span class="err">&#39;</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">&#39;</span><span class="p">%</span><span class="n">tucker</span><span class="p">%</span><span class="err">&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">or</span><span class="w"> </span><span class="p">(</span><span class="n">Name</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">&#39;</span><span class="p">%</span><span class="n">ted</span><span class="p">%</span><span class="err">&#39;</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">&#39;</span><span class="p">%</span><span class="n">Cruz</span><span class="p">%</span><span class="err">&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">OR</span><span class="w"> </span><span class="p">(</span><span class="n">Name</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">&#39;</span><span class="p">%</span><span class="n">donald</span><span class="p">%</span><span class="err">&#39;</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">like</span><span class="w"> </span><span class="err">&#39;</span><span class="p">%</span><span class="n">trump</span><span class="p">%</span><span class="err">&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">),</span><span class="w"></span>
+<span class="w">    </span><span class="n">authInventorySum_cte</span><span class="w"> </span><span class="nf">as</span><span class="w"> </span><span class="p">(</span><span class="w"></span>
+<span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">ReportDate</span><span class="p">,</span><span class="w"> </span><span class="n">ac</span><span class="p">.</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">sum</span><span class="p">(</span><span class="n">ei</span><span class="p">.</span><span class="n">itemcount</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">authoritemcount</span><span class="w"></span>
+<span class="w">    </span><span class="k">from</span><span class="w"> </span><span class="n">ElementInventory</span><span class="w"> </span><span class="n">ei</span><span class="w"></span>
+<span class="w">    </span><span class="n">inner</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">ElementDetail</span><span class="w"> </span><span class="n">ed</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">BibNum</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">BibNum</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">ReportDate</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">ReportDate</span><span class="w"></span>
+<span class="w">    </span><span class="n">inner</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">auth_cte</span><span class="w"> </span><span class="n">ac</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">ac</span><span class="p">.</span><span class="n">authorid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">ed</span><span class="p">.</span><span class="n">AuthorId</span><span class="w"></span>
+<span class="w">    </span><span class="k">group</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">ei</span><span class="p">.</span><span class="n">reportdate</span><span class="p">,</span><span class="w"> </span><span class="n">ac</span><span class="p">.</span><span class="n">Name</span><span class="w"></span>
+<span class="w">    </span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">select</span><span class="w"> </span><span class="p">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">authInventorySum_cte</span><span class="w"></span>
+<span class="w">    </span><span class="n">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">ReportDate</span><span class="w"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-C#"><pre><span></span><span class="err">#</span><span class="p">!</span><span class="n">share</span><span class="w"> </span><span class="p">--</span><span class="k">from</span><span class="w"> </span><span class="n">sql</span><span class="p">-</span><span class="n">splSnapshots</span><span class="w"> </span><span class="n">trumpAuthors</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">System.Linq</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.FSharp.Core</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Plotly.NET.LayoutObjects</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">Range</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Plotly</span><span class="p">.</span><span class="n">NET</span><span class="p">.</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">Range</span><span class="p">;</span><span class="w"></span>
+<span class="k">using</span><span class="w"> </span><span class="nn">static</span><span class="w"> </span><span class="n">Plotly</span><span class="p">.</span><span class="n">NET</span><span class="p">.</span><span class="n">StyleParam</span><span class="p">;</span><span class="w"></span>
+
+
+<span class="n">List</span><span class="p">&lt;</span><span class="n">GenericChart</span><span class="p">.</span><span class="n">GenericChart</span><span class="p">&gt;</span><span class="w"> </span><span class="n">charts</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="p">();</span><span class="w"></span>
+<span class="kt">var</span><span class="w"> </span><span class="n">annotation</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Annotation</span><span class="p">();</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">chartIndx</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"></span>
+<span class="k">foreach</span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">trumpAuthors</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">Data</span><span class="p">.</span><span class="n">GroupBy</span><span class="p">(</span><span class="n">x</span><span class="p">=&gt;</span><span class="n">x</span><span class="p">[</span><span class="s">&quot;Name&quot;</span><span class="p">])){</span><span class="w"></span>
+<span class="w">    </span><span class="n">annotation</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Annotation</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">annotation</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;text&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">ToString</span><span class="p">());</span><span class="w"></span>
+<span class="w">    </span><span class="n">annotation</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;showarrow&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">false</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">annotation</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;xref&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">$&quot;x{chartIndx} domain&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">annotation</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;yref&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">$&quot;y{chartIndx++} domain&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">//paper</span>
+<span class="w">    </span><span class="n">annotation</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;x&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">.</span><span class="m">5</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">annotation</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">annotation</span><span class="p">.</span><span class="n">SetValue</span><span class="p">(</span><span class="s">&quot;yshift&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">charts</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="w"></span>
+<span class="w">        </span><span class="n">Chart2D</span><span class="p">.</span><span class="n">Chart</span><span class="p">.</span><span class="n">Column</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">&gt;(</span><span class="w"></span>
+<span class="w">            </span><span class="n">Name</span><span class="p">:</span><span class="n">g</span><span class="p">.</span><span class="n">Key</span><span class="p">.</span><span class="n">ToString</span><span class="p">()</span><span class="w">  </span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="n">keysValues</span><span class="p">:</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="p">&lt;</span><span class="n">Tuple</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="kt">int</span><span class="p">&gt;&gt;(</span><span class="w"></span>
+<span class="w">                </span><span class="n">g</span><span class="p">.</span><span class="n">Select</span><span class="p">(</span><span class="n">kvp</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Tuple</span><span class="p">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="p">&gt;(((</span><span class="n">DateTime</span><span class="p">)</span><span class="n">kvp</span><span class="p">[</span><span class="s">&quot;ReportDate&quot;</span><span class="p">]).</span><span class="n">ToShortDateString</span><span class="p">(),</span><span class="w"> </span><span class="kt">int</span><span class="p">.</span><span class="n">Parse</span><span class="p">(</span><span class="n">kvp</span><span class="p">[</span><span class="s">&quot;authoritemcount&quot;</span><span class="p">].</span><span class="n">ToString</span><span class="p">())))</span><span class="w"></span>
+<span class="w">            </span><span class="p">)</span><span class="w">   </span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="n">WithXAxisStyle</span><span class="p">(</span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="n">Title</span><span class="p">.</span><span class="n">init</span><span class="p">(),</span><span class="n">ShowGrid</span><span class="p">:</span><span class="k">false</span><span class="p">,</span><span class="w"> </span><span class="n">ShowLine</span><span class="p">:</span><span class="k">true</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="n">WithYAxisStyle</span><span class="p">(</span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="n">Title</span><span class="p">.</span><span class="n">init</span><span class="p">())</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="n">WithAnnotation</span><span class="p">(</span><span class="n">annotation</span><span class="p">)</span><span class="w"></span>
+<span class="w">       </span><span class="c1">// .WithYAxis(LinearAxis.init&lt;int,int,int,int,int,int&gt;(Range:Range.NewMinMax(0,maxRange*1.05)))</span>
+<span class="w">    </span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">var</span><span class="w"> </span><span class="n">layout</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Layout</span><span class="p">.</span><span class="n">init</span><span class="p">&lt;</span><span class="kt">int</span><span class="p">&gt;(</span><span class="w"></span>
+<span class="w">    </span><span class="n">Width</span><span class="p">:</span><span class="m">1250</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">Height</span><span class="p">:</span><span class="m">1550</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="n">DragMode</span><span class="p">:</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">DragMode</span><span class="p">.</span><span class="n">Pan</span><span class="w"></span>
+<span class="w">     </span><span class="p">,</span><span class="n">Grid</span><span class="p">:</span><span class="w"> </span><span class="n">LayoutGrid</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="w"></span>
+<span class="w">         </span><span class="n">SubPlots</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">Tuple</span><span class="p">&lt;</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">,</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">&gt;[][]</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Tuple</span><span class="p">&lt;</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">,</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">&gt;[]{</span><span class="w"> </span><span class="n">Tuple</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">.</span><span class="n">NewX</span><span class="p">(</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">.</span><span class="n">NewY</span><span class="p">(</span><span class="m">1</span><span class="p">))</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Tuple</span><span class="p">&lt;</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">,</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">&gt;[]{</span><span class="w"> </span><span class="n">Tuple</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">.</span><span class="n">NewX</span><span class="p">(</span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">.</span><span class="n">NewY</span><span class="p">(</span><span class="m">2</span><span class="p">))</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Tuple</span><span class="p">&lt;</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">,</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">&gt;[]{</span><span class="w"> </span><span class="n">Tuple</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">.</span><span class="n">NewX</span><span class="p">(</span><span class="m">3</span><span class="p">),</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">.</span><span class="n">NewY</span><span class="p">(</span><span class="m">3</span><span class="p">)),</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">Tuple</span><span class="p">&lt;</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">,</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">&gt;[]{</span><span class="w"> </span><span class="n">Tuple</span><span class="p">.</span><span class="n">Create</span><span class="p">(</span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">.</span><span class="n">NewX</span><span class="p">(</span><span class="m">4</span><span class="p">),</span><span class="w"> </span><span class="n">StyleParam</span><span class="p">.</span><span class="n">LinearAxisId</span><span class="p">.</span><span class="n">NewY</span><span class="p">(</span><span class="m">4</span><span class="p">)),</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">           </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="p">,</span><span class="n">Colorway</span><span class="p">:</span><span class="n">Color</span><span class="p">.</span><span class="n">fromColors</span><span class="p">(</span><span class="w"></span>
+<span class="w">         </span><span class="n">Enumerable</span><span class="p">.</span><span class="n">Repeat</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">PaleVioletRed</span><span class="p">),</span><span class="m">3</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="p">.</span><span class="n">Prepend</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="n">fromKeyword</span><span class="p">(</span><span class="n">ColorKeyword</span><span class="p">.</span><span class="n">Orange</span><span class="p">))</span><span class="w"></span>
+<span class="w">         </span><span class="p">)</span><span class="w"></span>
+<span class="w">     </span><span class="p">,</span><span class="n">ShowLegend</span><span class="p">:</span><span class="k">false</span><span class="w"></span>
+<span class="w">    </span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Chart</span><span class="p">.</span><span class="n">Grid</span><span class="p">&lt;</span><span class="n">IEnumerable</span><span class="p">&lt;</span><span class="n">GenericChart</span><span class="p">.</span><span class="n">GenericChart</span><span class="p">&gt;&gt;(</span><span class="m">4</span><span class="p">,</span><span class="m">1</span><span class="w"></span>
+<span class="w">        </span><span class="p">,</span><span class="n">YGap</span><span class="p">:.</span><span class="m">37</span><span class="w">    </span>
+<span class="w">        </span><span class="p">,</span><span class="n">XGap</span><span class="p">:.</span><span class="m">1</span><span class="w"></span>
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">charts</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">.</span><span class="n">WithLayout</span><span class="p">(</span><span class="n">layout</span><span class="w"></span>
+<span class="w">        </span><span class="p">);</span><span class="w"></span>
+
+<span class="err">#</span><span class="p">!</span><span class="n">html</span><span class="w"></span>
+<span class="p">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">id</span><span class="p">=</span><span class="s">&quot;panel&quot;</span><span class="p">&gt;&lt;/</span><span class="n">a</span><span class="p">&gt;</span><span class="w"></span>
+
+<span class="err">#</span><span class="p">!</span><span class="n">csharp</span><span class="w"></span>
+<span class="n">g</span><span class="w"></span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+<a id="panel"></a>
+
+
+</div>
+
+</div>
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output " data-mime-type="text/html">
+
+<div>
+    <div id="ecc13e02-f51f-44ec-b882-0772e5dff161"><!-- Plotly chart will be drawn inside this DIV --></div>
+<script type="text/javascript">
+
+            var renderPlotly_ecc13e02f51f44ecb8820772e5dff161 = function() {
+            var fsharpPlotlyRequire = requirejs.config({context:'fsharp-plotly',paths:{plotly:'https://cdn.plot.ly/plotly-2.6.3.min'}}) || require;
+            fsharpPlotlyRequire(['plotly'], function(Plotly) {
+
+            var data = [{"type":"bar","name":"Trump, Donald, 1946-","x":["1/1/2017","2/1/2017","3/1/2017","4/1/2017","5/1/2017","6/1/2017","7/1/2017","8/1/2017","9/1/2017","10/1/2017","11/1/2017","12/1/2017","1/1/2018","2/1/2018","3/1/2018","4/1/2018","5/1/2018","6/1/2018","7/1/2018","8/1/2018","9/1/2018","10/1/2018","11/1/2018","12/1/2018","1/1/2019","2/1/2019","3/1/2019","4/1/2019","5/1/2019","6/1/2019","7/1/2019","8/1/2019","9/1/2019","10/1/2019","11/1/2019","12/1/2019","1/1/2020","2/1/2020","3/1/2020","4/1/2020","5/1/2020","6/1/2020","7/1/2020","8/1/2020","9/1/2020","10/1/2020","11/1/2020","12/1/2020","1/1/2021","2/1/2021","3/1/2021","4/1/2021","5/1/2021","6/1/2021","7/1/2021","8/1/2021","9/1/2021","10/1/2021","11/1/2021","12/1/2021","1/1/2022","2/1/2022","3/1/2022","4/1/2022","5/1/2022"],"y":[37,37,34,42,44,43,42,40,40,39,39,42,41,41,41,41,39,38,38,37,37,37,35,42,41,41,39,38,44,43,40,40,40,39,39,37,37,37,37,37,37,37,37,37,36,36,36,36,36,36,35,33,33,33,33,33,33,33,33,32,32,31,31,29,29],"orientation":"v","marker":{"pattern":{}},"xaxis":"x","yaxis":"y"},{"type":"bar","name":"Cruz, Ted, 1970-","x":["1/1/2017","2/1/2017","3/1/2017","4/1/2017","5/1/2017","6/1/2017","7/1/2017","8/1/2017","9/1/2017","10/1/2017","11/1/2017","12/1/2017","1/1/2018","2/1/2018","3/1/2018","4/1/2018","5/1/2018","6/1/2018","7/1/2018","8/1/2018","9/1/2018","10/1/2018","11/1/2018","12/1/2018","1/1/2019","2/1/2019","3/1/2019","4/1/2019","5/1/2019","6/1/2019","7/1/2019","8/1/2019","9/1/2019","10/1/2019","11/1/2019","12/1/2019","1/1/2020","2/1/2020","3/1/2020","4/1/2020","5/1/2020","6/1/2020","7/1/2020","8/1/2020","9/1/2020","10/1/2020","11/1/2020","12/1/2020","1/1/2021","2/1/2021","3/1/2021","4/1/2021","5/1/2021","6/1/2021","7/1/2021","8/1/2021","9/1/2021","10/1/2021","11/1/2021","12/1/2021","1/1/2022","2/1/2022","3/1/2022","4/1/2022","5/1/2022"],"y":[4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7],"orientation":"v","marker":{"pattern":{}},"xaxis":"x2","yaxis":"y2"},{"type":"bar","name":"Carlson, Tucker","x":["11/1/2018","12/1/2018","1/1/2019","2/1/2019","3/1/2019","4/1/2019","5/1/2019","6/1/2019","7/1/2019","8/1/2019","9/1/2019","10/1/2019","11/1/2019","12/1/2019","1/1/2020","2/1/2020","3/1/2020","4/1/2020","5/1/2020","6/1/2020","7/1/2020","8/1/2020","9/1/2020","10/1/2020","11/1/2020","12/1/2020","1/1/2021","2/1/2021","3/1/2021","4/1/2021","5/1/2021","6/1/2021","7/1/2021","8/1/2021","9/1/2021","10/1/2021","11/1/2021","12/1/2021","1/1/2022","2/1/2022","3/1/2022","4/1/2022","5/1/2022"],"y":[4,11,13,13,13,13,15,15,15,15,15,15,14,14,14,14,14,14,14,14,14,14,14,13,13,13,13,13,12,12,12,12,12,12,18,18,20,20,20,20,20,20,20],"orientation":"v","marker":{"pattern":{}},"xaxis":"x3","yaxis":"y3"},{"type":"bar","name":"Trump, Donald, Jr., 1977-","x":["12/1/2019","1/1/2020","2/1/2020","3/1/2020","4/1/2020","5/1/2020","6/1/2020","7/1/2020","8/1/2020","9/1/2020","10/1/2020","11/1/2020","12/1/2020","1/1/2021","2/1/2021","3/1/2021","4/1/2021","5/1/2021","6/1/2021","7/1/2021","8/1/2021","9/1/2021","10/1/2021","11/1/2021","12/1/2021","1/1/2022","2/1/2022","3/1/2022","4/1/2022","5/1/2022"],"y":[5,5,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,5,5,5],"orientation":"v","marker":{"pattern":{}},"xaxis":"x4","yaxis":"y4"}];
+            var layout = {"width":1250,"height":1550,"template":{"layout":{"title":{"x":0.05},"font":{"color":"rgba(42, 63, 95, 1.0)"},"paper_bgcolor":"rgba(255, 255, 255, 1.0)","plot_bgcolor":"rgba(229, 236, 246, 1.0)","autotypenumbers":"strict","colorscale":{"diverging":[[0.0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1.0,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"hovermode":"closest","hoverlabel":{"align":"left"},"coloraxis":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"geo":{"showland":true,"landcolor":"rgba(229, 236, 246, 1.0)","showlakes":true,"lakecolor":"rgba(255, 255, 255, 1.0)","subunitcolor":"rgba(255, 255, 255, 1.0)","bgcolor":"rgba(255, 255, 255, 1.0)"},"mapbox":{"style":"light"},"polar":{"bgcolor":"rgba(229, 236, 246, 1.0)","radialaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""},"angularaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","ticks":""}},"scene":{"xaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"yaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true},"zaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","gridwidth":2.0,"zerolinecolor":"rgba(255, 255, 255, 1.0)","backgroundcolor":"rgba(229, 236, 246, 1.0)","showbackground":true}},"ternary":{"aaxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"baxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"caxis":{"ticks":"","linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)"},"bgcolor":"rgba(229, 236, 246, 1.0)"},"xaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"yaxis":{"title":{"standoff":15},"ticks":"","automargin":true,"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","zerolinecolor":"rgba(255, 255, 255, 1.0)","zerolinewidth":2.0},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"shapedefaults":{"line":{"color":"rgba(42, 63, 95, 1.0)"}},"colorway":["rgba(99, 110, 250, 1.0)","rgba(239, 85, 59, 1.0)","rgba(0, 204, 150, 1.0)","rgba(171, 99, 250, 1.0)","rgba(255, 161, 90, 1.0)","rgba(25, 211, 243, 1.0)","rgba(255, 102, 146, 1.0)","rgba(182, 232, 128, 1.0)","rgba(255, 151, 255, 1.0)","rgba(254, 203, 82, 1.0)"]},"data":{"bar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"error_x":{"color":"rgba(42, 63, 95, 1.0)"},"error_y":{"color":"rgba(42, 63, 95, 1.0)"}}],"barpolar":[{"marker":{"line":{"color":"rgba(229, 236, 246, 1.0)","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"carpet":[{"aaxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"},"baxis":{"linecolor":"rgba(255, 255, 255, 1.0)","gridcolor":"rgba(255, 255, 255, 1.0)","endlinecolor":"rgba(42, 63, 95, 1.0)","minorgridcolor":"rgba(255, 255, 255, 1.0)","startlinecolor":"rgba(42, 63, 95, 1.0)"}}],"choropleth":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"heatmap":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}}}],"histogram2d":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"colorbar":{"outlinewidth":0.0,"ticks":""}}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"pie":[{"automargin":true}],"scatter":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatter3d":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}},"line":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0.0,"ticks":""}}}],"surface":[{"colorbar":{"outlinewidth":0.0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"table":[{"cells":{"fill":{"color":"rgba(235, 240, 248, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}},"header":{"fill":{"color":"rgba(200, 212, 227, 1.0)"},"line":{"color":"rgba(255, 255, 255, 1.0)"}}}]}},"xaxis":{"title":{},"showline":true,"showgrid":false},"yaxis":{"title":{}},"annotations":[{"text":"Trump, Donald, 1946-","showarrow":false,"xref":"x1 domain","yref":"y1 domain","x":0.5,"y":1,"yshift":30},{"text":"Cruz, Ted, 1970-","showarrow":false,"xref":"x2 domain","yref":"y2 domain","x":0.5,"y":1,"yshift":30},{"text":"Carlson, Tucker","showarrow":false,"xref":"x3 domain","yref":"y3 domain","x":0.5,"y":1,"yshift":30},{"text":"Trump, Donald, Jr., 1977-","showarrow":false,"xref":"x4 domain","yref":"y4 domain","x":0.5,"y":1,"yshift":30}],"xaxis2":{"title":{},"showline":true,"showgrid":false},"yaxis2":{"title":{}},"xaxis3":{"title":{},"showline":true,"showgrid":false},"yaxis3":{"title":{}},"xaxis4":{"title":{},"showline":true,"showgrid":false},"yaxis4":{"title":{}},"grid":{"rows":4,"columns":1,"pattern":"independent","xgap":0.1,"ygap":0.37,"subplots":[["xy"],["x2y2"],["x3y3"],["x4y4"]]},"showlegend":false,"colorway":["rgba(255, 165, 0, 1.0)","rgba(219, 112, 147, 1.0)","rgba(219, 112, 147, 1.0)","rgba(219, 112, 147, 1.0)"],"dragmode":"pan"};
+            var config = {"responsive":true};
+            Plotly.newPlot('ecc13e02-f51f-44ec-b882-0772e5dff161', data, layout, config);
+});
+            };
+            if ((typeof(requirejs) !==  typeof(Function)) || (typeof(requirejs.config) !== typeof(Function))) {
+                var script = document.createElement("script");
+                script.setAttribute("src", "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js");
+                script.onload = function(){
+                    renderPlotly_ecc13e02f51f44ecb8820772e5dff161();
+                };
+                document.getElementsByTagName("head")[0].appendChild(script);
+            }
+            else {
+                renderPlotly_ecc13e02f51f44ecb8820772e5dff161();
+            }
+</script>
+
+    
+</div    
+
+</div>
+
+</div>
+
+</div>
+
 </div>
 
 </div>
